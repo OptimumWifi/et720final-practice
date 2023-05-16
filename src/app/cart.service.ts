@@ -22,10 +22,10 @@ export class CartService {
     this.items = [];
     return this.items;
   }
-  etShippingPrices() {
+  getShippingPrices() {
     return this.http.get<{type: string, price: number}[]>('/assets/shipping.json');
   }
-  
+
   constructor(
 
     private http: HttpClient
